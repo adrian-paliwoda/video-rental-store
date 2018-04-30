@@ -13,19 +13,6 @@ namespace video_rental_store
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-/*            routes.MapRoute(
-                name: "MovieByRealeseDate",
-                url: "movies/released/{year}/{month}",
-                defaults: new { controller = "Movies", action = "ByReleaseDate", year = UrlParameter.Optional, month = UrlParameter.Optional},
-               constraints: new {year = @"\d{4}", month = @"\d{2}"}
-            );
-
-            routes.MapRoute(
-                name: "Edit",
-                url: "{controller}/{action}/{movieId}",
-                defaults: new {controller = "Home", action = "Index", id = UrlParameter.Optional}
-            );*/
-
             routes.MapMvcAttributeRoutes();
 
             routes.MapRoute(

@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using Microsoft.Ajax.Utilities;
 using video_rental_store.Models;
+using video_rental_store.ViewModel;
 
 namespace video_rental_store.Controllers
 {
@@ -49,9 +50,19 @@ namespace video_rental_store.Controllers
         public ActionResult Random()
         {
             var movie = new Movie() { Name = "Shrek"};
+            var customers = new List<Customer>
+            {
+                new Customer {Name = "Customer 1"},
+                new Customer {Name = "Customer 2"}
+            };
 
+            var random = new RandomMovieViewModel
+            {
+                Movie = movie,
+                Customers = customers
+            };
 
-            return View(movie);
+            return View(random);
         }
 
         [Route("Movies/Edit/{id}")]
