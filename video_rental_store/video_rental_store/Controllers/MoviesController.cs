@@ -13,22 +13,18 @@ namespace video_rental_store.Controllers
     public class MoviesController : Controller
     {
         // GET: Movies
-        [Route("Movies/{pageIndex:int?}/{sortBy?}")]
-        [Route("Movies/Index/{pageIndex:int?}/{sortBy?}")]
-        public ActionResult Index(int? pageIndex, string sortBy)
+        public ActionResult Index()
         {
-            if (!pageIndex.HasValue)
-            {
-                pageIndex = 1;
-            }
+            var movies = GetMovies();
 
-            if (String.IsNullOrEmpty(sortBy))
-            {
-                sortBy = "Name";
-            }
+            return View(movies);
+        }
 
-            //return View();
-            return Content(String.Format("pageIndex: {0}, sortBy: {1}", pageIndex, sortBy));
+        public ActionResult Details(int id)
+        {
+            var movies = GetMovies().FirstOrDefault(p => p.Id == id);
+
+            return View(movies);
         }
 
         [Route("Movies/released/{year:regex(\\d{4}):int?}/{month:range(1,12):int?}")]
@@ -56,13 +52,13 @@ namespace video_rental_store.Controllers
                 new Customer {Name = "Customer 2"}
             };
 
-            var random = new RandomMovieViewModel
+            var viewModel = new RandomMovieViewModel
             {
                 Movie = movie,
                 Customers = customers
             };
 
-            return View(random);
+            return View(viewModel);
         }
 
         [Route("Movies/Edit/{id}")]
@@ -70,6 +66,16 @@ namespace video_rental_store.Controllers
         {
             return Content("id =" + id);
             //return View();
+        }
+
+
+        private IEnumerable<Movie> GetMovies()
+        {
+            return new List<Movie>
+            {
+                new Movie {Id = 0, Name = "Shrek"},
+                new Movie {Id = 1, Name = "Memento"}
+            };
         }
     }
 }
