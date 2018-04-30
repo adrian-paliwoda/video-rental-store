@@ -21,6 +21,9 @@ namespace video_rental_store.Controllers
         {
             var customer = GetCustomers().FirstOrDefault(p => p.Id == id);
 
+            if (customer == null)
+                return HttpNotFound();
+
             return View(customer);
         }
 

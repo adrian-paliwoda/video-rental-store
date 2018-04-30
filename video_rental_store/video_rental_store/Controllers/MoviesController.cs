@@ -24,6 +24,9 @@ namespace video_rental_store.Controllers
         {
             var movies = GetMovies().FirstOrDefault(p => p.Id == id);
 
+            if (movies == null)
+                return HttpNotFound();
+
             return View(movies);
         }
 
