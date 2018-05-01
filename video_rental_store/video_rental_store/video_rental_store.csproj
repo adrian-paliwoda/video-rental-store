@@ -219,9 +219,70 @@
     <Compile Include="Migrations\201805011556156_PopulateMembershipTypes.Designer.cs">
       <DependentUpon>201805011556156_PopulateMembershipTypes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805011743260_ApplyAnnotationsToCustomerName.cs" />
+    <Compile Include="Migrations\201805011743260_ApplyAnnotationsToCustomerName.Designer.cs">
+      <DependentUpon>201805011743260_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805011746085_refactor.cs" />
+    <Compile Include="Migrations\201805011746085_refactor.Designer.cs">
+      <DependentUpon>201805011746085_refactor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805011816540_PopulateMembershipTypes1.cs" />
+    <Compile Include="Migrations\201805011816540_PopulateMembershipTypes1.Designer.cs">
+      <DependentUpon>201805011816540_PopulateMembershipTypes1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805011820596_PopulateMembershipTypes2.cs" />
+    <Compile Include="Migrations\201805011820596_PopulateMembershipTypes2.Designer.cs">
+      <DependentUpon>201805011820596_PopulateMembershipTypes2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805011838054_Refactoring.cs" />
+    <Compile Include="Migrations\201805011838054_Refactoring.Designer.cs">
+      <DependentUpon>201805011838054_Refactoring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805011841459_Refactoring1.cs" />
+    <Compile Include="Migrations\201805011841459_Refactoring1.Designer.cs">
+      <DependentUpon>201805011841459_Refactoring1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805011853299_AddBirthDate.cs" />
+    <Compile Include="Migrations\201805011853299_AddBirthDate.Designer.cs">
+      <DependentUpon>201805011853299_AddBirthDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805011856256_AddSomeStaff.cs" />
+    <Compile Include="Migrations\201805011856256_AddSomeStaff.Designer.cs">
+      <DependentUpon>201805011856256_AddSomeStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805011922221_refactorNext.cs" />
+    <Compile Include="Migrations\201805011922221_refactorNext.Designer.cs">
+      <DependentUpon>201805011922221_refactorNext.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805011928472_AddGenre.cs" />
+    <Compile Include="Migrations\201805011928472_AddGenre.Designer.cs">
+      <DependentUpon>201805011928472_AddGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805011930591_Genres.cs" />
+    <Compile Include="Migrations\201805011930591_Genres.Designer.cs">
+      <DependentUpon>201805011930591_Genres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805012016384_AddGenres.cs" />
+    <Compile Include="Migrations\201805012016384_AddGenres.Designer.cs">
+      <DependentUpon>201805012016384_AddGenres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805012037353_AddMovies.cs" />
+    <Compile Include="Migrations\201805012037353_AddMovies.Designer.cs">
+      <DependentUpon>201805012037353_AddMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805012044568_SetSomeMovies.cs" />
+    <Compile Include="Migrations\201805012044568_SetSomeMovies.Designer.cs">
+      <DependentUpon>201805012044568_SetSomeMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805012045330_SetDataToMoviesTable.cs" />
+    <Compile Include="Migrations\201805012045330_SetDataToMoviesTable.Designer.cs">
+      <DependentUpon>201805012045330_SetDataToMoviesTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MemberShipType.cs" />
@@ -320,6 +381,51 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805011556156_PopulateMembershipTypes.resx">
       <DependentUpon>201805011556156_PopulateMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805011743260_ApplyAnnotationsToCustomerName.resx">
+      <DependentUpon>201805011743260_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805011746085_refactor.resx">
+      <DependentUpon>201805011746085_refactor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805011816540_PopulateMembershipTypes1.resx">
+      <DependentUpon>201805011816540_PopulateMembershipTypes1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805011820596_PopulateMembershipTypes2.resx">
+      <DependentUpon>201805011820596_PopulateMembershipTypes2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805011838054_Refactoring.resx">
+      <DependentUpon>201805011838054_Refactoring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805011841459_Refactoring1.resx">
+      <DependentUpon>201805011841459_Refactoring1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805011853299_AddBirthDate.resx">
+      <DependentUpon>201805011853299_AddBirthDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805011856256_AddSomeStaff.resx">
+      <DependentUpon>201805011856256_AddSomeStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805011922221_refactorNext.resx">
+      <DependentUpon>201805011922221_refactorNext.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805011928472_AddGenre.resx">
+      <DependentUpon>201805011928472_AddGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805011930591_Genres.resx">
+      <DependentUpon>201805011930591_Genres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805012016384_AddGenres.resx">
+      <DependentUpon>201805012016384_AddGenres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805012037353_AddMovies.resx">
+      <DependentUpon>201805012037353_AddMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805012044568_SetSomeMovies.resx">
+      <DependentUpon>201805012044568_SetSomeMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805012045330_SetDataToMoviesTable.resx">
+      <DependentUpon>201805012045330_SetDataToMoviesTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

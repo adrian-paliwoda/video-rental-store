@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Web;
@@ -12,17 +13,32 @@ namespace video_rental_store.Controllers
 {
     public class MoviesController : Controller
     {
+        private ApplicationDbContext _context;
+
+        public MoviesController()
+        {
+            _context = new ApplicationDbContext();
+        }
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
         // GET: Movies
         public ActionResult Index()
         {
-            var movies = GetMovies();
+            var movies = _context.Movies.Include(m => m.Genre);
+
+            if (movies == null)
+                return HttpNotFound();
 
             return View(movies);
         }
 
+
+
         public ActionResult Details(int id)
         {
-            var movies = GetMovies().FirstOrDefault(p => p.Id == id);
+            var movies = _context.Movies.Include(m => m.Genre).FirstOrDefault(p => p.Id == id);
 
             if (movies == null)
                 return HttpNotFound();
@@ -69,16 +85,6 @@ namespace video_rental_store.Controllers
         {
             return Content("id =" + id);
             //return View();
-        }
-
-
-        private IEnumerable<Movie> GetMovies()
-        {
-            return new List<Movie>
-            {
-                new Movie {Id = 0, Name = "Shrek"},
-                new Movie {Id = 1, Name = "Memento"}
-            };
         }
     }
 }
