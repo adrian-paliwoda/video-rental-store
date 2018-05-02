@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using video_rental_store.Models;
+using video_rental_store.ViewModels;
 
 namespace video_rental_store.Controllers
 {
@@ -42,6 +43,18 @@ namespace video_rental_store.Controllers
                 return HttpNotFound();
 
             return View(customers);
+        }
+
+        public ActionResult  New()
+        {
+            var membershipType = _context.MemberShipTypes.ToList();
+
+            var newCustomerViewModel = new NewCustomerViewModel
+            {
+                MemberShipTypes = membershipType
+            };
+
+            return View(newCustomerViewModel);
         }
 
     }
