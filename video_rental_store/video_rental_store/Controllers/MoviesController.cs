@@ -112,6 +112,7 @@ namespace video_rental_store.Controllers
             return View("MovieForm", viewModel);
         }
 
+        [HttpPost]
         public ActionResult Save(Movie movie)
         {
             if (movie.Id == 0)
