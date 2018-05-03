@@ -7,6 +7,7 @@ using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Web;
 using System.Web.Mvc;
 using Microsoft.Ajax.Utilities;
+using video_rental_store.Migrations;
 using video_rental_store.Models;
 using video_rental_store.ViewModel;
 using video_rental_store.ViewModels;
@@ -86,8 +87,12 @@ namespace video_rental_store.Controllers
         {
             var genres = _context.Genres.ToList();
 
+            var movie = new Movie();
+            movie.ReleaseDate = new DateTime();
+
             var viewModel = new MovieFormViewModel
             {
+                Movie = movie,
                 Genres = genres
             };
 
@@ -113,8 +118,21 @@ namespace video_rental_store.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Movie movie)
         {
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new MovieFormViewModel
+                {
+                    Movie = movie,
+                    Genres = _context.Genres.ToList()
+                };
+
+                return View("MovieForm", viewModel);
+
+            }
+
             if (movie.Id == 0)
             {
                 movie.AddedDate = DateTime.Now;

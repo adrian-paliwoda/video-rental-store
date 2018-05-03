@@ -27,6 +27,12 @@ namespace video_rental_store.Models
         public DateTime? AddedDate { get; set; }
 
         [Display(Name = "Number in stack")]
+        [NumberInStackRange]
         public int NumberInStock { get; set; }
+
+
+        public static readonly byte MinInStack = 1;
+        public static readonly byte MaxInStack = 20;
+
     }
 }
