@@ -87,12 +87,8 @@ namespace video_rental_store.Controllers
         {
             var genres = _context.Genres.ToList();
 
-            var movie = new Movie();
-            movie.ReleaseDate = new DateTime();
-
             var viewModel = new MovieFormViewModel
             {
-                Movie = movie,
                 Genres = genres
             };
 
@@ -108,9 +104,8 @@ namespace video_rental_store.Controllers
             if (movie == null)
                 return HttpNotFound();
 
-            var viewModel = new MovieFormViewModel
+            var viewModel = new MovieFormViewModel(movie)
             {
-                Movie = movie,
                 Genres = _context.Genres.ToList()
             };
 
@@ -123,9 +118,8 @@ namespace video_rental_store.Controllers
         {
             if (!ModelState.IsValid)
             {
-                var viewModel = new MovieFormViewModel
+                var viewModel = new MovieFormViewModel(movie)
                 {
-                    Movie = movie,
                     Genres = _context.Genres.ToList()
                 };
 
