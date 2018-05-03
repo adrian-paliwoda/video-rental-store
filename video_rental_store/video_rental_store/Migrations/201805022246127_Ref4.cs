@@ -3,7 +3,7 @@ namespace video_rental_store.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class SetDataToMoviesTable : DbMigration
+    public partial class Ref4 : DbMigration
     {
         public override void Up()
         {

@@ -8,6 +8,7 @@ using System.Web.Mvc;
 using Microsoft.Ajax.Utilities;
 using video_rental_store.Models;
 using video_rental_store.ViewModel;
+using video_rental_store.ViewModels;
 
 namespace video_rental_store.Controllers
 {
@@ -26,7 +27,7 @@ namespace video_rental_store.Controllers
         // GET: Movies
         public ActionResult Index()
         {
-            var movies = _context.Movies.Include(m => m.Genre);
+            var movies = _context.Movies.Include(m => m.Genre).ToList();
 
             if (movies == null)
                 return HttpNotFound();
@@ -80,11 +81,54 @@ namespace video_rental_store.Controllers
             return View(viewModel);
         }
 
+        public ActionResult New()
+        {
+            var genres = _context.Genres.ToList();
+
+            var viewModel = new MovieFormViewModel
+            {
+                Genres = genres
+            };
+
+            return View("MovieForm", viewModel);
+
+        }
+
         [Route("Movies/Edit/{id}")]
         public ActionResult Edit(int id)
         {
-            return Content("id =" + id);
-            //return View();
+            var movie = _context.Movies.SingleOrDefault(m => m.Id == id);
+
+            if (movie == null)
+                return HttpNotFound();
+
+            var viewModel = new MovieFormViewModel
+            {
+                Movie = movie,
+                Genres = _context.Genres.ToList()
+            };
+
+            return View("MovieForm", viewModel);
+        }
+
+        public ActionResult Save(Movie movie)
+        {
+            if (movie.Id == 0)
+                _context.Movies.Add(movie);
+            else
+            {
+                var movieInDB = _context.Movies.Single(m => m.Id == movie.Id);
+
+                movieInDB.Name = movie.Name;
+                movieInDB.AddedDate = movie.AddedDate;
+                movieInDB.Genre = movie.Genre;
+                movieInDB.ReleaseDate = movie.ReleaseDate;
+                movieInDB.NumberInStock = movie.NumberInStock;
+            }
+
+              _context.SaveChanges();
+
+            return RedirectToAction("Index");
         }
     }
 }

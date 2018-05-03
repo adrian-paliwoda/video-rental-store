@@ -45,16 +45,53 @@ namespace video_rental_store.Controllers
             return View(customers);
         }
 
-        public ActionResult  New()
+        public ActionResult New()
         {
             var membershipType = _context.MemberShipTypes.ToList();
 
-            var newCustomerViewModel = new NewCustomerViewModel
+            var newCustomerViewModel = new CustomerFormViewModel
             {
                 MemberShipTypes = membershipType
             };
 
-            return View(newCustomerViewModel);
+            return View("CustomerForm",newCustomerViewModel);
+        }
+
+        [HttpPost]
+        public ActionResult Save(Customer customer)
+        {
+            if (customer.Id == 0 )
+                _context.Customers.Add(customer);
+            else
+            {
+                var customerFromDB = _context.Customers.Single(c => c.Id == customer.Id);
+
+                customerFromDB.Name = customer.Name;
+                customerFromDB.BirthDate = customer.BirthDate;
+                customerFromDB.IsSubscribedToNewsletter = customer.IsSubscribedToNewsletter;
+                customerFromDB.MemberShipTypeId = customer.MemberShipTypeId;
+
+            }
+            _context.SaveChanges();
+
+            return RedirectToAction("Index", "Customers");
+        }
+
+
+        public ActionResult Edit(int id)
+        {
+            var customer = _context.Customers.SingleOrDefault(p => p.Id == id);
+
+            if (customer == null)
+                return HttpNotFound();
+
+            var viewModel = new CustomerFormViewModel
+            {
+                Customer = customer,
+                MemberShipTypes = _context.MemberShipTypes.ToList()
+            };
+
+            return View("CustomerForm", viewModel);
         }
 
     }

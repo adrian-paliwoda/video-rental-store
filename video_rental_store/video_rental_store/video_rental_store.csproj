@@ -279,6 +279,102 @@
     <Compile Include="Migrations\201805012045330_SetDataToMoviesTable.Designer.cs">
       <DependentUpon>201805012045330_SetDataToMoviesTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805022055250_AddGenreId.cs" />
+    <Compile Include="Migrations\201805022055250_AddGenreId.Designer.cs">
+      <DependentUpon>201805022055250_AddGenreId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805022123095_update-database.cs" />
+    <Compile Include="Migrations\201805022123095_update-database.Designer.cs">
+      <DependentUpon>201805022123095_update-database.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805022128431_Refactor0.cs" />
+    <Compile Include="Migrations\201805022128431_Refactor0.Designer.cs">
+      <DependentUpon>201805022128431_Refactor0.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805022133225_Refactor1.cs" />
+    <Compile Include="Migrations\201805022133225_Refactor1.Designer.cs">
+      <DependentUpon>201805022133225_Refactor1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805022135252_Refactor2.cs" />
+    <Compile Include="Migrations\201805022135252_Refactor2.Designer.cs">
+      <DependentUpon>201805022135252_Refactor2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805022141151_Refactor3.cs" />
+    <Compile Include="Migrations\201805022141151_Refactor3.Designer.cs">
+      <DependentUpon>201805022141151_Refactor3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805022149287_Movies.cs" />
+    <Compile Include="Migrations\201805022149287_Movies.Designer.cs">
+      <DependentUpon>201805022149287_Movies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805022230507_Ref.cs" />
+    <Compile Include="Migrations\201805022230507_Ref.Designer.cs">
+      <DependentUpon>201805022230507_Ref.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805022232146_Ref2.cs" />
+    <Compile Include="Migrations\201805022232146_Ref2.Designer.cs">
+      <DependentUpon>201805022232146_Ref2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805022243556_Ref3.cs" />
+    <Compile Include="Migrations\201805022243556_Ref3.Designer.cs">
+      <DependentUpon>201805022243556_Ref3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805022246127_Ref4.cs" />
+    <Compile Include="Migrations\201805022246127_Ref4.Designer.cs">
+      <DependentUpon>201805022246127_Ref4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805022306291_Refac.cs" />
+    <Compile Include="Migrations\201805022306291_Refac.Designer.cs">
+      <DependentUpon>201805022306291_Refac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805022316057_Movies1.cs" />
+    <Compile Include="Migrations\201805022316057_Movies1.Designer.cs">
+      <DependentUpon>201805022316057_Movies1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805030807144_repair.cs" />
+    <Compile Include="Migrations\201805030807144_repair.Designer.cs">
+      <DependentUpon>201805030807144_repair.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805030809562_AddGenres1.cs" />
+    <Compile Include="Migrations\201805030809562_AddGenres1.Designer.cs">
+      <DependentUpon>201805030809562_AddGenres1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805030811386_AddMovies1.cs" />
+    <Compile Include="Migrations\201805030811386_AddMovies1.Designer.cs">
+      <DependentUpon>201805030811386_AddMovies1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805030855259_Repair15.cs" />
+    <Compile Include="Migrations\201805030855259_Repair15.Designer.cs">
+      <DependentUpon>201805030855259_Repair15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805030901331_Repair16.cs" />
+    <Compile Include="Migrations\201805030901331_Repair16.Designer.cs">
+      <DependentUpon>201805030901331_Repair16.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805030911304_Repair17.cs" />
+    <Compile Include="Migrations\201805030911304_Repair17.Designer.cs">
+      <DependentUpon>201805030911304_Repair17.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805030914083_Repair18.cs" />
+    <Compile Include="Migrations\201805030914083_Repair18.Designer.cs">
+      <DependentUpon>201805030914083_Repair18.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805030917106_Repair19.cs" />
+    <Compile Include="Migrations\201805030917106_Repair19.Designer.cs">
+      <DependentUpon>201805030917106_Repair19.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805030918569_Repair20.cs" />
+    <Compile Include="Migrations\201805030918569_Repair20.Designer.cs">
+      <DependentUpon>201805030918569_Repair20.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805030929403_AddGenreUpdateDarkKnight.cs" />
+    <Compile Include="Migrations\201805030929403_AddGenreUpdateDarkKnight.Designer.cs">
+      <DependentUpon>201805030929403_AddGenreUpdateDarkKnight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805030936332_Rapair21.cs" />
+    <Compile Include="Migrations\201805030936332_Rapair21.Designer.cs">
+      <DependentUpon>201805030936332_Rapair21.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -289,7 +385,8 @@
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="ViewModels\NewCustomerViewModel.cs" />
+    <Compile Include="ViewModels\CustomerFormViewModel.cs" />
+    <Compile Include="ViewModels\MovieFormViewModel.cs" />
     <Compile Include="ViewModels\RandomMovieViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -358,7 +455,8 @@
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Movies\Index.cshtml" />
     <Content Include="Views\Movies\Details.cshtml" />
-    <Content Include="Views\Customers\New.cshtml" />
+    <Content Include="Views\Customers\CustomerForm.cshtml" />
+    <Content Include="Views\Movies\MovieForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -428,6 +526,78 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805012045330_SetDataToMoviesTable.resx">
       <DependentUpon>201805012045330_SetDataToMoviesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805022055250_AddGenreId.resx">
+      <DependentUpon>201805022055250_AddGenreId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805022123095_update-database.resx">
+      <DependentUpon>201805022123095_update-database.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805022128431_Refactor0.resx">
+      <DependentUpon>201805022128431_Refactor0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805022133225_Refactor1.resx">
+      <DependentUpon>201805022133225_Refactor1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805022135252_Refactor2.resx">
+      <DependentUpon>201805022135252_Refactor2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805022141151_Refactor3.resx">
+      <DependentUpon>201805022141151_Refactor3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805022149287_Movies.resx">
+      <DependentUpon>201805022149287_Movies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805022230507_Ref.resx">
+      <DependentUpon>201805022230507_Ref.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805022232146_Ref2.resx">
+      <DependentUpon>201805022232146_Ref2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805022243556_Ref3.resx">
+      <DependentUpon>201805022243556_Ref3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805022246127_Ref4.resx">
+      <DependentUpon>201805022246127_Ref4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805022306291_Refac.resx">
+      <DependentUpon>201805022306291_Refac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805022316057_Movies1.resx">
+      <DependentUpon>201805022316057_Movies1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805030807144_repair.resx">
+      <DependentUpon>201805030807144_repair.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805030809562_AddGenres1.resx">
+      <DependentUpon>201805030809562_AddGenres1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805030811386_AddMovies1.resx">
+      <DependentUpon>201805030811386_AddMovies1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805030855259_Repair15.resx">
+      <DependentUpon>201805030855259_Repair15.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805030901331_Repair16.resx">
+      <DependentUpon>201805030901331_Repair16.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805030911304_Repair17.resx">
+      <DependentUpon>201805030911304_Repair17.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805030914083_Repair18.resx">
+      <DependentUpon>201805030914083_Repair18.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805030917106_Repair19.resx">
+      <DependentUpon>201805030917106_Repair19.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805030918569_Repair20.resx">
+      <DependentUpon>201805030918569_Repair20.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805030929403_AddGenreUpdateDarkKnight.resx">
+      <DependentUpon>201805030929403_AddGenreUpdateDarkKnight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805030936332_Rapair21.resx">
+      <DependentUpon>201805030936332_Rapair21.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
