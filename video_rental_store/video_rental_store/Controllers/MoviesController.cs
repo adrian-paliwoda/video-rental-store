@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Validation;
 using System.Linq;
 using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Web;
@@ -114,19 +115,29 @@ namespace video_rental_store.Controllers
         public ActionResult Save(Movie movie)
         {
             if (movie.Id == 0)
+            {
+                movie.AddedDate = DateTime.Now;
                 _context.Movies.Add(movie);
+            }
             else
             {
                 var movieInDB = _context.Movies.Single(m => m.Id == movie.Id);
 
                 movieInDB.Name = movie.Name;
-                movieInDB.AddedDate = movie.AddedDate;
-                movieInDB.Genre = movie.Genre;
+                movieInDB.AddedDate = DateTime.Now;
+                movieInDB.GenreId = movie.GenreId;
                 movieInDB.ReleaseDate = movie.ReleaseDate;
                 movieInDB.NumberInStock = movie.NumberInStock;
             }
 
-              _context.SaveChanges();
+            try
+            {
+                _context.SaveChanges();
+            }
+            catch (DbEntityValidationException e)
+            {
+                Console.WriteLine(e);
+            }
 
             return RedirectToAction("Index");
         }
