@@ -54,9 +54,9 @@ namespace video_rental_store
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "1935756546475589",
+               appSecret: "8cad857c276452b8fddffd6bd0118d31");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{

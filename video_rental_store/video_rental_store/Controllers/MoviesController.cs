@@ -29,12 +29,10 @@ namespace video_rental_store.Controllers
         // GET: Movies
         public ActionResult Index()
         {
-            var movies = _context.Movies.Include(m => m.Genre).ToList();
+            if (User.IsInRole(RoleName.CanManageMovies))
+                return View("List");
 
-            if (movies == null)
-                return HttpNotFound();
-
-            return View(movies);
+            return View("ReadOnlyList");
         }
 
 
@@ -83,6 +81,7 @@ namespace video_rental_store.Controllers
             return View(viewModel);
         }
 
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult New()
         {
             var genres = _context.Genres.ToList();
@@ -97,6 +96,7 @@ namespace video_rental_store.Controllers
         }
 
         [Route("Movies/Edit/{id}")]
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult Edit(int id)
         {
             var movie = _context.Movies.SingleOrDefault(m => m.Id == id);
@@ -114,6 +114,7 @@ namespace video_rental_store.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult Save(Movie movie)
         {
             if (!ModelState.IsValid)
