@@ -27,6 +27,7 @@ namespace video_rental_store.Controllers
             _context.Dispose();
         }
         // GET: Movies
+        [OutputCache(Duration = 0, VaryByParam = "*", NoStore = true)]
         public ActionResult Index()
         {
             if (User.IsInRole(RoleName.CanManageMovies))
@@ -36,7 +37,7 @@ namespace video_rental_store.Controllers
         }
 
 
-
+        [OutputCache(Duration = 0, VaryByParam = "*", NoStore = true)]
         public ActionResult Details(int id)
         {
             var movies = _context.Movies.Include(m => m.Genre).FirstOrDefault(p => p.Id == id);
