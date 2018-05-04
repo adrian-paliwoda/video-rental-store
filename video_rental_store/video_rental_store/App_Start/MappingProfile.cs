@@ -20,6 +20,9 @@ namespace video_rental_store.App_Start
 
             Mapper.CreateMap<MemberShipType, MemberShipTypeDto>();
             Mapper.CreateMap<MemberShipTypeDto, MemberShipType>().ForMember(p => p.Id, opt => opt.Ignore());
+
+            Mapper.CreateMap<Genre, GenreDto>();
+            Mapper.CreateMap<GenreDto, Genre>().ForMember(p => p.Id, opt => opt.Ignore());
         }
     }
 }

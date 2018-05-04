@@ -4,9 +4,9 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace video_rental_store.Models
+namespace video_rental_store.Dtos
 {
-    public class Genre
+    public class GenreDto
     {
         public int Id { get; set; }
 
