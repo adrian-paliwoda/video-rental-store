@@ -409,9 +409,16 @@
     <Compile Include="Migrations\201805041947331_AddDrivingLicenseToApplicationUser.Designer.cs">
       <DependentUpon>201805041947331_AddDrivingLicenseToApplicationUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805042102540_AddDrivingLicenseToApplicationUser2.cs" />
+    <Compile Include="Migrations\201805042102540_AddDrivingLicenseToApplicationUser2.Designer.cs">
+      <DependentUpon>201805042102540_AddDrivingLicenseToApplicationUser2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\ApplicationUser.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\ExternalLoginConfirmationViewModel.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -817,6 +824,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805041947331_AddDrivingLicenseToApplicationUser.resx">
       <DependentUpon>201805041947331_AddDrivingLicenseToApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805042102540_AddDrivingLicenseToApplicationUser2.resx">
+      <DependentUpon>201805042102540_AddDrivingLicenseToApplicationUser2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

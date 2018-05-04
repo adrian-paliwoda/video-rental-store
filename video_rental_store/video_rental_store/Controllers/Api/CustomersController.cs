@@ -42,6 +42,7 @@ namespace video_rental_store.Controllers.Api
         }
 
         [HttpPost]
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public IHttpActionResult CreateCustomer(CustomerDto customerDto)
         {
             if (!ModelState.IsValid)
@@ -57,6 +58,7 @@ namespace video_rental_store.Controllers.Api
         }
 
         [HttpPut]
+        [Authorize(Roles = RoleName.CanManageMovies)]
         public void UpdateCustomer(int id, CustomerDto customerDto)
         {
             if (!ModelState.IsValid)
@@ -73,6 +75,7 @@ namespace video_rental_store.Controllers.Api
         }
 
         [HttpDelete]
+        [System.Web.Mvc.Authorize(Roles = RoleName.CanManageMovies)]
         public void DeleteCustomer(int id)
         {
             var customerInDB = _context.Customers.SingleOrDefault(p => p.Id == id);
