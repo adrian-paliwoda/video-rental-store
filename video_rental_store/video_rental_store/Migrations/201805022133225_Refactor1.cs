@@ -7,8 +7,8 @@ namespace video_rental_store.Migrations
     {
         public override void Up()
         {
-            DropIndex("dbo.Movies", new[] { "GenreId_Id" });
-            DropColumn("dbo.Movies", "GenreId_Id");
+            DropIndex("dbo.MovieIds", new[] { "GenreId_Id" });
+            DropColumn("dbo.MovieIds", "GenreId_Id");
         }
         
         public override void Down()

@@ -26,7 +26,7 @@ namespace video_rental_store.Controllers
         {
             _context.Dispose();
         }
-        // GET: Movies
+        // GET: MovieIds
         [OutputCache(Duration = 0, VaryByParam = "*", NoStore = true)]
         public ActionResult Index()
         {
@@ -48,7 +48,7 @@ namespace video_rental_store.Controllers
             return View(movies);
         }
 
-        [Route("Movies/released/{year:regex(\\d{4}):int?}/{month:range(1,12):int?}")]
+        [Route("MovieIds/released/{year:regex(\\d{4}):int?}/{month:range(1,12):int?}")]
         public ActionResult ByReleaseDate(int? year, int? month)
         {
             if (!year.HasValue)
@@ -96,7 +96,7 @@ namespace video_rental_store.Controllers
 
         }
 
-        [Route("Movies/Edit/{id}")]
+        [Route("MovieIds/Edit/{id}")]
         [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult Edit(int id)
         {
@@ -132,6 +132,7 @@ namespace video_rental_store.Controllers
             if (movie.Id == 0)
             {
                 movie.AddedDate = DateTime.Now;
+           //     movie.NumberAvailable = movie.NumberInStock;
                 _context.Movies.Add(movie);
             }
             else
@@ -142,6 +143,7 @@ namespace video_rental_store.Controllers
                 movieInDB.AddedDate = DateTime.Now;
                 movieInDB.GenreId = movie.GenreId;
                 movieInDB.ReleaseDate = movie.ReleaseDate;
+            //    movieInDB.NumberAvailable = movieInDB.NumberAvailable + (movie.NumberInStock - movieInDB.NumberInStock);
                 movieInDB.NumberInStock = movie.NumberInStock;
             }
 

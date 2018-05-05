@@ -30,6 +30,8 @@ namespace video_rental_store.Models
         [NumberInStackRange]
         public int NumberInStock { get; set; }
 
+        public int NumberAvailable { get; set; }
+
 
         public static readonly byte MinInStack = 1;
         public static readonly byte MaxInStack = 20;

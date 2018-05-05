@@ -12,8 +12,8 @@ namespace video_rental_store.Migrations
             Sql("INSERT INTO Movies (Name, GenreId, ReleaseDate,AddedDate,NumberInStock ) VALUES('Schindlers list', 3, '11-30-1993','04-30-2018', 1)");
             Sql("INSERT INTO Movies (Name, GenreId, ReleaseDate,AddedDate,NumberInStock ) VALUES('The dark knight', 4, '07-14-2008','05-12-2018', 3)");
             Sql("INSERT INTO Movies (Name, GenreId, ReleaseDate,AddedDate,NumberInStock ) VALUES('Godfather', 5, '03-15-1972','04-12-2018', 3)");
-            Sql("INSERT INTO Movies (Name, GenreId, ReleaseDate,AddedDate,NumberInStock ) VALUES('Westworld', 1, '03-10-2016','04-22-2018',2)");
-            Sql("INSERT INTO Movies (Name, GenreId, ReleaseDate,AddedDate,NumberInStock ) VALUES('Starwars', 2, '05-25-1997','05-01-2018', 3)");
+            Sql("INSERT INTO MovieIds (Name, GenreId, ReleaseDate,AddedDate,NumberInStock ) VALUES('Westworld', 1, '03-10-2016','04-22-2018',2)");
+            Sql("INSERT INTO MovieIds (Name, GenreId, ReleaseDate,AddedDate,NumberInStock ) VALUES('Starwars', 2, '05-25-1997','05-01-2018', 3)");
         }
 
         public override void Down()

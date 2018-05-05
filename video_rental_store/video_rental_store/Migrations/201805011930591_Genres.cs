@@ -8,7 +8,7 @@ namespace video_rental_store.Migrations
         public override void Up()
         {
             CreateTable(
-                "dbo.Movies",
+                "dbo.MovieIds",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
@@ -32,10 +32,10 @@ namespace video_rental_store.Migrations
         
         public override void Down()
         {
-            DropForeignKey("dbo.Movies", "Genre_Id", "dbo.Genres");
-            DropIndex("dbo.Movies", new[] { "Genre_Id" });
+            DropForeignKey("dbo.MovieIds", "Genre_Id", "dbo.Genres");
+            DropIndex("dbo.MovieIds", new[] { "Genre_Id" });
             DropTable("dbo.Genres");
-            DropTable("dbo.Movies");
+            DropTable("dbo.MovieIds");
         }
     }
 }

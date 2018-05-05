@@ -7,7 +7,7 @@ namespace video_rental_store.Migrations
     {
         public override void Up()
         {
-            Sql("Update Movies Set Name = 'Drama' Where Id = 6");
+            Sql("Update MovieIds Set Name = 'Drama' Where Id = 6");
         }
         
         public override void Down()

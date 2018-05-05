@@ -7,16 +7,16 @@ namespace video_rental_store.Migrations
     {
         public override void Up()
         {
-            AddColumn("dbo.Movies", "GenreId_Id", c => c.Int(nullable: false));
-           // CreateIndex("dbo.Movies", "GenreId_Id");
-         //   AddForeignKey("dbo.Movies", "GenreId_Id", "dbo.Genres", "Id", cascadeDelete: true);
+            AddColumn("dbo.MovieIds", "GenreId_Id", c => c.Int(nullable: false));
+           // CreateIndex("dbo.MovieIds", "GenreId_Id");
+         //   AddForeignKey("dbo.MovieIds", "GenreId_Id", "dbo.Genres", "Id", cascadeDelete: true);
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.Movies", "GenreId_Id", "dbo.Genres");
-            DropIndex("dbo.Movies", new[] { "GenreId_Id" });
-            DropColumn("dbo.Movies", "GenreId_Id");
+            DropForeignKey("dbo.MovieIds", "GenreId_Id", "dbo.Genres");
+            DropIndex("dbo.MovieIds", new[] { "GenreId_Id" });
+            DropColumn("dbo.MovieIds", "GenreId_Id");
         }
     }
 }

@@ -7,9 +7,9 @@ namespace video_rental_store.Migrations
     {
         public override void Up()
         {
-            DropTable("Movies");
+            DropTable("MovieIds");
             CreateTable(
-                    "dbo.Movies",
+                    "dbo.MovieIds",
                     c => new
                     {
                         Id = c.Int(nullable: false, identity: true),

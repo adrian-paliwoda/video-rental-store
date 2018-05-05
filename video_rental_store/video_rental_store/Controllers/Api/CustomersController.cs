@@ -33,7 +33,7 @@ namespace video_rental_store.Controllers.Api
 
         public IHttpActionResult GetCustomer(int id)
         {
-            var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
+            var customer = _context.Customers.SingleOrDefault(p => p.Id == id);
 
             if (customer == null)
                 return NotFound();

@@ -7,7 +7,7 @@ namespace video_rental_store.Migrations
     {
         public override void Up()
         {
-            //DropTable("Movies");
+            //DropTable("MovieIds");
         }
         
         public override void Down()

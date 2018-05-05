@@ -28,7 +28,7 @@ namespace video_rental_store.Controllers.Api
                 Select(Mapper.Map<Movie, MovieDto>);
 
 
-            return Ok(movies);
+            return Ok(movies);  
         }
 
         public IHttpActionResult GetMovie(int id)
