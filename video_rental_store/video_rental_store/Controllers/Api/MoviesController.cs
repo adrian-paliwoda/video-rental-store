@@ -20,7 +20,7 @@ namespace video_rental_store.Controllers.Api
             _context = new ApplicationDbContext();
         }
 
-        public IHttpActionResult GetMovies(string query)
+        public IHttpActionResult GetMovies(string query = null)
         {
             var movies = _context.Movies
                 .Include(m => m.Genre)
