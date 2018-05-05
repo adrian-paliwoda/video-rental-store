@@ -20,10 +20,16 @@ namespace video_rental_store.Controllers.Api
             _context = new ApplicationDbContext();
         }
 
-        public IHttpActionResult GetMovies()
+        public IHttpActionResult GetMovies(string query)
         {
             var movies = _context.Movies
                 .Include(m => m.Genre)
+                .Where( m => m.NumberAvailable > 0);
+
+            if (!String.IsNullOrWhiteSpace(query))
+                movies = movies.Where(m => m.Name.Contains(query));
+
+            var moveisDbos = movies
                 .ToList().
                 Select(Mapper.Map<Movie, MovieDto>);
 

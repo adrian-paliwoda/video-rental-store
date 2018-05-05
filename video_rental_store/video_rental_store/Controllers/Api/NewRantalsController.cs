@@ -19,11 +19,6 @@ namespace video_rental_store.Controllers.Api
             _context = new ApplicationDbContext();
         }
 
-        public IHttpActionResult GetNewRental()
-        {
-
-            return NotFound();
-        }
 
         [HttpPost]
         public IHttpActionResult CreateNewRentals(NewRentalDto newRentalDto)

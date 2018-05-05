@@ -21,10 +21,15 @@ namespace video_rental_store.Controllers.Api
         {
             _context = new ApplicationDbContext();
         }
-        public IHttpActionResult GetCustomers()
+        public IHttpActionResult GetCustomers(string query = null)
         {
-            var customerDtos = _context.Customers
-                .Include(c => c.MemberShipType)
+            var customerQuery = _context.Customers
+                .Include(c => c.MemberShipType);
+
+            if (!String.IsNullOrWhiteSpace(query))
+                customerQuery = customerQuery.Where(c => c.Name.Contains(query));
+
+            var customerDtos = customerQuery
                 .ToList()
                 .Select(Mapper.Map<Customer, CustomerDto>);
 

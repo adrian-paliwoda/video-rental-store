@@ -15,7 +15,8 @@ namespace video_rental_store
                         "~/Scripts/respond.js",
                         "~/Scripts/datatables/jquery.datatables.js",
                         "~/Scripts/datatables/datatables.bootstrap.js",
-                        "~/Scripts/typeahead.bundle.js"
+                        "~/Scripts/typeahead.bundle.js",
+                        "~/scripts/toastr.js"
                         ));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
@@ -27,11 +28,12 @@ namespace video_rental_store
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/datatables/css/datatables.bootstrap.css",
-                      "~/Content/site.css",
-                      "~/Content/typeahead.css"
-                    
+                        "~/Content/bootstrap.css",
+                        "~/Content/datatables/css/datatables.bootstrap.css",
+                        "~/Content/site.css",
+                        "~/Content/typeahead.css",
+                        "~/content/toastr.css",
+                        "~/Content/site.css"
                         ));
         }
     }
