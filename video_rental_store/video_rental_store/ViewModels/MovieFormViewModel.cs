@@ -27,7 +27,7 @@ namespace video_rental_store.ViewModels
 
         [Required]
         [Display(Name = "Number in stack")]
-        [NumberInStackRange]
+        [Range(1,20)]
         public int? NumberInStock { get; set; }
 
 

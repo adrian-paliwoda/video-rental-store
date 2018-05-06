@@ -23,7 +23,7 @@ namespace video_rental_store.Dtos
 
         public DateTime? AddedDate { get; set; }
 
-//        [NumberInStackRange]
+        [Range(1, 20)]
         public int? NumberInStock { get; set; }
     }
 }

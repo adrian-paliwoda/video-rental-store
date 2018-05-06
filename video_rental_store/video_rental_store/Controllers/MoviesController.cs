@@ -96,7 +96,7 @@ namespace video_rental_store.Controllers
 
         }
 
-        [Route("MovieIds/Edit/{id}")]
+        [Route("Movies/Edit/{id}")]
         [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult Edit(int id)
         {

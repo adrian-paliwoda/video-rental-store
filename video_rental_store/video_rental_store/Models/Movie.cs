@@ -27,7 +27,7 @@ namespace video_rental_store.Models
         public DateTime? AddedDate { get; set; }
 
         [Display(Name = "Number in stack")]
-        [NumberInStackRange]
+        [Range(1, 20)]
         public int NumberInStock { get; set; }
 
         public int NumberAvailable { get; set; }
